@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.title }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+{% block head %}{% endblock %}
+</head>
+<body>
+<header class="site-header">
+  <a class="site-name" href="/">{{ site.title }}</a>
+  <nav><a href="/about/">About</a> <a href="/feed.xml">RSS</a></nav>
+</header>
+<main>
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <p>{{ site.author }} · <a href="/llms.txt">llms.txt</a> · every post also available as plain <a href="/">markdown</a></p>
+</footer>
+</body>
+</html>

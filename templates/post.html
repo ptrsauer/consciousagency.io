@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} · {{ site.title }}{% endblock %}
+{% block description %}{{ post.description or site.description }}{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ post.title | tojson }},
+  "datePublished": "{{ post.date.isoformat() }}",
+  "author": {"@type": "Person", "name": "{{ site.author }}"},
+  "url": "{{ post.url }}"
+}
+</script>
+{% endblock %}
+{% block content %}
+<article>
+  <header>
+    <h1>{{ post.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ post.date.isoformat() }}">{{ post.date.strftime("%B %d, %Y") }}</time>
+      · <a href="/posts/{{ post.slug }}.md">markdown version</a>
+    </p>
+  </header>
+  {{ post.html | safe }}
+</article>
+{% endblock %}

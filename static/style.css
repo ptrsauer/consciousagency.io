@@ -1,0 +1,108 @@
+/* Conscious Agency — handcrafted, no framework.
+   Brand: emerald #059669 · headings heavy sans (Raleway-feel via system stack,
+   subsetted WOFF2 can be added later) · body serif (PT-Serif-feel). */
+
+:root {
+  --accent: #059669;
+  --bg: #ffffff;
+  --fg: #1c1c1c;
+  --fg-soft: #5c5c5c;
+  --rule: #e4e4e4;
+  --code-bg: #f4f4f2;
+  --sans: "Raleway", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --serif: "PT Serif", Georgia, "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121413;
+    --fg: #e6e4df;
+    --fg-soft: #a3a19b;
+    --rule: #2c2e2d;
+    --code-bg: #1d201f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+  max-width: 42rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: 1.075rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, .site-name, nav, .post-meta, .tagline, time {
+  font-family: var(--sans);
+}
+
+h1 { font-size: 1.85rem; font-weight: 800; line-height: 1.2; margin: 0.5rem 0 0.25rem; }
+h2 { font-size: 1.25rem; font-weight: 800; margin-top: 2.25rem; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+.site-name { font-weight: 800; font-size: 1.15rem; color: var(--fg); letter-spacing: 0.01em; }
+.site-header nav a { margin-left: 1rem; color: var(--fg-soft); font-size: 0.9rem; }
+
+.tagline { color: var(--fg-soft); margin-top: 0; }
+
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 1.75rem; }
+.post-list time { display: block; color: var(--fg-soft); font-size: 0.85rem; }
+.post-list a { font-family: var(--sans); font-weight: 700; font-size: 1.15rem; }
+.post-list p { margin: 0.25rem 0 0; color: var(--fg-soft); font-size: 0.95rem; }
+.post-list .md-link, .md-link { font-size: 0.8rem; font-weight: 400; color: var(--fg-soft); }
+
+.post-meta { color: var(--fg-soft); font-size: 0.9rem; margin-bottom: 2rem; }
+.post-meta a { color: var(--fg-soft); text-decoration: underline; }
+
+article h1 + .post-meta { margin-top: 0.25rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  color: var(--fg-soft);
+  font-style: italic;
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre { background: var(--code-bg); padding: 1rem; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+
+img { max-width: 100%; height: auto; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { border: 1px solid var(--rule); padding: 0.4rem 0.6rem; text-align: left; }
+th { font-family: var(--sans); }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--fg-soft);
+  font-size: 0.85rem;
+  font-family: var(--sans);
+}

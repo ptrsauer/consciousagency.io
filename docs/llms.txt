@@ -1,0 +1,7 @@
+# Conscious Agency
+
+> Research, experiments, and reflections by Peter Sauer.
+
+## Posts
+
+- [Three Ledgers: How to Value AI Coding When the Metrics Disappoint](https://consciousagency.io/posts/three-ledgers.md): Uber capped its AI budget, METR lost its control group. Both stories say less about AI productivity than about how we account for value.

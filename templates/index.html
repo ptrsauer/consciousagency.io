@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="tagline">{{ site.description }}</p>
+<ul class="post-list">
+{% for post in posts %}
+  <li>
+    <time datetime="{{ post.date.isoformat() }}">{{ post.date.strftime("%b %d, %Y") }} · <a class="md-link" href="/posts/{{ post.slug }}.md" title="raw markdown">.md</a></time>
+    <a href="/posts/{{ post.slug }}/">{{ post.title }}</a>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}
