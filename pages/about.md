@@ -4,7 +4,7 @@ title: About
 
 # About
 
-I'm Peter Sauer. I lead platform technology at a fintech in Berlin, and I spend my evenings running what is best described as a personal research lab: a knowledge system operated by more than a hundred AI agents that read my mail, triage my meetings, watch my training recovery, and occasionally disagree with me.
+I'm Peter Sauer. I lead platform technology at a fintech in Berlin, and I spend my evenings running what is best described as a personal research lab: a knowledge system operated by more than a hundred AI agents that maintain it around the clock, watch my training recovery, and occasionally disagree with me.
 
 This site is where the transferable parts of that work get written up. The recurring questions: how to orchestrate AI agents so they stay useful and governable, how systems thinking applies to organizations as much as to personal strategy, and what actually survives measurement, from developer productivity to heart rate variability.
 
