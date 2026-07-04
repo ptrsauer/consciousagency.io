@@ -28,6 +28,8 @@ git add -A && git commit -m "post: <title>" && git push   # = publish
 
 Drafts live outside this repo until they are ready (and in `drafts/`, which the build ignores).
 
+Note: GitHub Pages serves with `Cache-Control: max-age=600`, so a pushed change can take up to 10 minutes to appear for a URL you visited recently. A hard reload on that URL bypasses it.
+
 ## Domain setup (Cloudflare)
 
 DNS for the apex domain points at GitHub Pages:
