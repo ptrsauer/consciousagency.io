@@ -189,10 +189,12 @@ if __name__ == "__main__":
     out = build()
     if "--serve" in sys.argv:
         import http.server
+        from functools import partial
 
         print("serving on http://localhost:8000 (ctrl-c to stop)")
         http.server.test(
-            HandlerClass=http.server.SimpleHTTPRequestHandler,
+            HandlerClass=partial(
+                http.server.SimpleHTTPRequestHandler, directory=str(out)
+            ),
             port=8000,
-            directory=str(out),
         )
