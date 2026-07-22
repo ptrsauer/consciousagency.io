@@ -4,4 +4,9 @@
 
 ## Posts
 
+- [Proof Is a Technology](https://consciousagency.io/posts/proof-is-a-technology.md): Babylon verified by application, the Greeks verified the inference. 2,500 years later, that fork decides how much you can trust an unsupervised AI agent.
+- [Notation Is Compute](https://consciousagency.io/posts/notation-is-compute.md): Multiplication in Roman numerals was expert work; in place-value it's a child's procedure. What Brahmagupta and al-Khwarizmi knew about spec design.
+- [When Physics Was the Test Suite](https://consciousagency.io/posts/when-physics-was-the-test-suite.md): Calculus ran 150 years on undefined foundations and nothing collapsed. The reason is the oldest test-coverage story in engineering.
+- [The Most Productive Failure](https://consciousagency.io/posts/the-most-productive-failure.md): Incompleteness killed Hilbert's program and somehow got blamed for far more. The limits fall on finding proofs, never on checking them, and that asymmetry is what carries Lean and Coq today.
+- [The Untrusted Searcher](https://consciousagency.io/posts/the-untrusted-searcher.md): Twelve exhausted referees, a Lean kernel, and why an agent's autonomy budget scales with the hardness of its verifier.
 - [Three Ledgers: How to Value AI Coding When the Metrics Disappoint](https://consciousagency.io/posts/three-ledgers.md): Uber capped its AI budget, METR lost its control group. Both stories say less about AI productivity than about how we account for value.

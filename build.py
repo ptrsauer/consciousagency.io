@@ -32,6 +32,10 @@ SITE = {
     "author": "Peter Sauer",
     "accent": "#059669",
 }
+# Math notation policy: Unicode symbols directly in Markdown (ε, δ, √2, ℵ₀, …) —
+# zero-dependency, flows through RSS/llms.txt/.md copies unchanged.
+# Future option (only when a post needs real display formulas): render LaTeX to
+# native MathML at build time via `latex2mathml` (still 0 JS client-side).
 MD_EXTENSIONS = ["fenced_code", "tables", "footnotes", "smarty"]
 
 
@@ -57,6 +61,9 @@ def load_post(path: Path) -> dict:
         "title": meta.get("title", slug),
         "description": meta.get("description", ""),
         "date": post_date,
+        # Tiebreak for posts sharing a date (e.g. a series dropped in one day):
+        # lower `order` reads first. Absent -> 0, so standalone posts are unaffected.
+        "order": int(meta.get("order", 0) or 0),
         "markdown": body,
         "html": markdown.markdown(body, extensions=MD_EXTENSIONS),
         "url": f"{SITE['url']}/posts/{slug}/",
@@ -80,9 +87,10 @@ def build() -> Path:
     )
     env.globals["site"] = SITE
 
+    # Newest date first; within one date, lower `order` (earlier series part) first.
     posts = sorted(
         (load_post(p) for p in (ROOT / "posts").glob("*.md")),
-        key=lambda p: p["date"],
+        key=lambda p: (p["date"], -p["order"]),
         reverse=True,
     )
 
